@@ -1,0 +1,208 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+}
+
+header > ion-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+header > h1 {
+  cursor: pointer;
+}
+
+main {
+  background-color: white;
+  padding: 3rem .5rem;
+}
+
+main > section:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section > h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  font-size: 3rem;
+}
+
+.span-chess {
+  background: black;
+  color: white;
+  border: 1px solid black;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+.span-coders {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+.columns-container {
+  display: flex;
+  /* background-color: red;
+  height: 4rem; */
+}
+
+@media (max-width: 768px) {
+  .columns-container {
+    flex-direction: column;
+  }
+  
+  .columns-container > .glance:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.columns-container > .glance:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.glance {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 16px 8px rgba(73, 73, 73, 0.5);
+}
+
+.glance.first-glance,
+.glance.third-glance {
+  background-color: black;
+  color: white;
+}
+.glance > h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+.glance > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.offer-message {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+
+form > input,
+form > select,
+form > textarea {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+}
+
+form > div {
+  margin-bottom: 1rem;
+}
+
+form > button {
+  background-color: black;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+form > button:hover > ion-icon {
+  margin-left: 1.75rem;
+}
+
+form > button > ion-icon {
+  transition: all 0.3s ease;
+  margin-left: 0.75rem;
+}
+
+footer {
+  background-color: black;
+  padding: 0.5rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: #53b0ae;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+ul > li:not(:last-child) {
+  margin-bottom: .25rem;
+}
+
+table {
+  margin: 4rem auto;
+  font-size: 1.5rem;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+padding: .5rem 1rem;
+}
+
+table > thead {
+  font-weight: 700;
+  background-color: black;
+  color: white;
+}
+
+tr > td:first-child {
+  font-weight: bold;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.large-text {
+  font-size: 1.25rem;
+}

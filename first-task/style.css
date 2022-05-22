@@ -1,0 +1,225 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1.7em;
+}
+
+header div {
+  font-size: 1.7em;
+  padding: 20px 0px;
+  font-weight: 500;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+footer div {
+  font-size: small;
+}
+
+footer div .chess-coders {
+  color: turquoise;
+}
+
+main {
+  margin: 40px auto;
+  display: flex;
+  flex-flow: column;
+  max-width: 1000px;
+}
+
+main>section>h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.4em;
+  font-weight: 500;
+}
+
+main>section:nth-child(1)>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+main>section:nth-child(1)>div>span {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 2px 4px;
+  margin: 0px;
+}
+
+main>section:nth-child(1)>div>span:first-child {
+  background-color: black;
+  color: white;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+img {
+  width: 200px;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row;
+  column-gap: 50px;
+  justify-content: center;
+}
+
+div.cards>div {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0px 0px 18px 0px black;
+}
+
+main>section>div>div>h1 {
+  margin: 8px auto;
+  font-size: 2.4em;
+}
+
+main>section:nth-child(2)>div>div:nth-child(2) {
+  background-color: white;
+  color: black;
+}
+
+table {
+  margin: 40px auto;
+  margin-bottom: 0px;
+  border-collapse: collapse;
+}
+
+table tr {
+  font-size: large;
+  font-weight: 500;
+}
+
+table th {
+  background-color: black;
+  color: white;
+  font-weight: 400;
+}
+
+table tr:nth-child(2) {
+  background-color: lightgray;
+}
+
+table td,
+table th {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+table tr:last-child td {
+  border-bottom: 0.5px solid black;
+}
+
+section:last-child p {
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  row-gap: 12px;
+  width: 30%;
+  min-width: 400px;
+  margin: 24px auto;
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form textarea {
+  border-radius: 5px;
+  font-size: larger;
+  border-width: 1px;
+  padding: 4px;
+}
+
+form div {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+form>div:nth-child(6) {
+  flex-flow: row;
+  align-items: center;
+}
+
+form label {
+  font-size: 0.8em;
+}
+
+form button {
+  border-radius: 5px;
+  padding: 8px 0px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  transition: 0.3s;
+}
+
+form button:hover {
+  opacity: 0.8;
+  column-gap: 16px;
+}
+
+form textarea {
+  height: 120px;
+}
+
+section:last-child {
+  margin-bottom: 24px;
+}
+
+#title:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .cards {
+    flex-flow: column;
+    row-gap: 32px;
+  }
+}

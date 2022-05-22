@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+}
+
+header>ion-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+header>h1 {
+  cursor: pointer;
+}

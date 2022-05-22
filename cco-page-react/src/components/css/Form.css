@@ -1,0 +1,43 @@
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+
+form>input,
+form>select,
+form>textarea {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+}
+
+form>div {
+  margin-bottom: 1rem;
+}
+
+form>button {
+  background-color: black;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+
+form>button:hover>ion-icon {
+  margin-left: 1.75rem;
+}
+
+form>button>ion-icon {
+  transition: all 0.3s ease;
+  margin-left: 0.75rem;
+}

@@ -1,0 +1,51 @@
+.columns-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .columns-container {
+    flex-direction: column;
+  }
+
+  .columns-container>.glance:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.columns-container>.glance:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.glance {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 16px 8px rgba(73, 73, 73, 0.5);
+}
+
+.glance.first-glance,
+.glance.third-glance {
+  background-color: black;
+  color: white;
+}
+
+.glance>h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.glance>img {
+  max-width: 100%;
+  height: auto;
+}
+
+.glance:nth-child(1),
+.glance:nth-child(3) {
+  background-color: black;
+  color: white;
+}
