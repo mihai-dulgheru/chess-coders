@@ -1,4 +1,4 @@
-import javascript from '../src/assets/images/javascript.png';
+import javascript from '../src/assets/images/javascript.png'
 
 const columnsContainer = [
   {
@@ -22,6 +22,6 @@ const columnsContainer = [
     },
     title: 'JavaScript'
   }
-];
+]
 
-export default columnsContainer;
+export default columnsContainer

@@ -1,7 +1,7 @@
-import React from 'react';
-import './css/Form.css';
+import React from 'react'
+import './css/Form.css'
 
-function Form() {
+function Form () {
   return (
     <form>
       <input type='text' placeholder='Your name...' name='name' />
@@ -15,17 +15,17 @@ function Form() {
         <option value='other'>Other</option>
       </select>
       <label htmlFor='message'>Your message</label>
-      <textarea rows='6' name='message'></textarea>
+      <textarea rows='6' name='message' />
       <div>
         <input type='checkbox' name='agree-terms' value='Agree' required />
         <label htmlFor='agree-terms'>I agree to the terms and conditions</label>
         <br />
       </div>
       <button>
-        Send message <ion-icon name='send-outline'></ion-icon>
+        Send message <ion-icon name='send-outline' />
       </button>
     </form>
-  );
+  )
 }
 
-export default Form;
+export default Form

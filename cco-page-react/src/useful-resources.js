@@ -15,6 +15,6 @@ const usefulResources = [
     name: "W3Schools.org - Learn to Code with the world's largest web developer site.",
     link: 'https://w3schools.com'
   }
-];
+]
 
-export default usefulResources;
+export default usefulResources

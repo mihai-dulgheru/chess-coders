@@ -1,12 +1,12 @@
-import './App.css';
-import FirstSelect from './components/FirstSelectEmpty';
+import './App.css'
+import FirstSelect from './components/FirstSelectEmpty'
 
-function App() {
+function App () {
   return (
-    <div className="App">
+    <div className='App'>
       <FirstSelect />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -3,9 +3,9 @@ const handleTitleClick = () => {
 }
 
 const handleInfoClick = () => {
-  alert("Info coming soon")
+  alert('Info coming soon')
 }
 
 const handleAccountClick = () => {
-  alert("Account coming soon...")
+  alert('Account coming soon...')
 }

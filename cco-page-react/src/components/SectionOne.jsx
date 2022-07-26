@@ -1,6 +1,6 @@
-import React from 'react';
-import UsefulResourcesList from './UsefulResourcesList';
-import './css/SectionOne.css';
+import React from 'react'
+import UsefulResourcesList from './UsefulResourcesList'
+import './css/SectionOne.css'
 
 const SectionOne = () => {
   return (
@@ -17,7 +17,7 @@ const SectionOne = () => {
         <span className='span-coders'>CODERS</span>
       </p>
     </section>
-  );
-};
+  )
+}
 
-export default SectionOne;
+export default SectionOne

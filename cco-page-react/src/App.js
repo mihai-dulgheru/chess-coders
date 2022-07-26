@@ -1,11 +1,11 @@
-import './App.css';
-import Header from './components/Header';
-import SectionOne from './components/SectionOne';
-import SectionTwo from './components/SectionTwo';
-import SectionThree from './components/SectionThree';
-import Footer from './components/Footer';
+import './App.css'
+import Header from './components/Header'
+import SectionOne from './components/SectionOne'
+import SectionTwo from './components/SectionTwo'
+import SectionThree from './components/SectionThree'
+import Footer from './components/Footer'
 
-function App() {
+function App () {
   return (
     <div className='app'>
       <Header />
@@ -16,7 +16,7 @@ function App() {
       </main>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

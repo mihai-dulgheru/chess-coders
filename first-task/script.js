@@ -1,4 +1,4 @@
-function main() {
+function main () {
   const info = document.getElementById('info')
   const account = document.getElementById('account')
   const title = document.getElementById('title')

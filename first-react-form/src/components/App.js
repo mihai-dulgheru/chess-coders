@@ -1,12 +1,12 @@
-import './App.css';
-import Form from './Form';
+import './App.css'
+import Form from './Form'
 
-function App() {
+function App () {
   return (
     <div className='App'>
       <Form maxLength='160' />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

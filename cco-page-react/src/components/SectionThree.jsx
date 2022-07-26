@@ -1,6 +1,6 @@
-import React from 'react';
-import Form from './Form';
-import './css/SectionThree.css';
+import React from 'react'
+import Form from './Form'
+import './css/SectionThree.css'
 
 const SectionThree = () => {
   return (
@@ -12,7 +12,7 @@ const SectionThree = () => {
       </p>
       <Form />
     </section>
-  );
-};
+  )
+}
 
-export default SectionThree;
+export default SectionThree

@@ -1,8 +1,8 @@
-import React from 'react';
-import columnsContainer from '../columns-container';
-import TechnologyCard from './TechnologyCard';
-import './css/SectionTwo.css';
-import Table from './Table';
+import React from 'react'
+import columnsContainer from '../columns-container'
+import TechnologyCard from './TechnologyCard'
+import './css/SectionTwo.css'
+import Table from './Table'
 
 const SectionTwo = () => {
   return (
@@ -17,7 +17,7 @@ const SectionTwo = () => {
       </div>
       <Table />
     </section>
-  );
-};
+  )
+}
 
-export default SectionTwo;
+export default SectionTwo

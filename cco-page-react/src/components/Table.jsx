@@ -1,6 +1,6 @@
-import React from 'react';
-import technologies from '../technologies';
-import './css/Table.css';
+import React from 'react'
+import technologies from '../technologies'
+import './css/Table.css'
 
 const Table = () => {
   return (
@@ -19,12 +19,12 @@ const Table = () => {
                 <td>{item.technology}</td>
                 <td>{item.time}</td>
               </tr>
-            );
+            )
           })
         }
       </tbody>
     </table>
-  );
-};
+  )
+}
 
-export default Table;
+export default Table

@@ -80,7 +80,7 @@ console.log(persons)
 // If a person with the specified id does not exist in the array, return an empty object
 const getById = (id) => {
   const found = persons.find((item) => item.id === id)
-  return found ? found : {}
+  return found || {}
 }
 console.log(getById(8))
 console.log(getById(9))

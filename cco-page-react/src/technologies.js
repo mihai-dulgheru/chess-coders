@@ -11,6 +11,6 @@ const technologies = [
     technology: 'JavaScript',
     time: 'a lifetime'
   }
-];
+]
 
-export default technologies;
+export default technologies
