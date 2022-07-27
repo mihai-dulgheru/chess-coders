@@ -1,28 +1,23 @@
-import React, { useState } from 'react'
-
-const SalePriceWithoutVATInput = ({ label, value, handleChange }) => {
-  const [, setSalePriceWithoutVAT] = useState(value)
-
+const SalePriceWithoutVatInput = ({ label, state, setState }) => {
   const handleChangeInput = (event) => {
-    setSalePriceWithoutVAT(event.target.value)
-    handleChange(event)
-  }
+    const salePriceWithoutVat = event.target.value;
+    const salePriceWithVat = (salePriceWithoutVat * (1 + state.VatRate / 100)).toFixed(2);
+    setState({ ...state, salePriceWithoutVat, salePriceWithVat });
+  };
 
   return (
-    <div className='flex justify-content-flex-start'>
-      <label className='w-50' htmlFor='sale-price-without-VAT'>
-        {label}
-      </label>
+    <div className="flex flex-col justify-start gap-1">
+      <label htmlFor="sale-price-without-VAT">{label}</label>
       <input
-        className='w-50 border-radius-5px border'
-        type='number'
-        id='sale-price-without-VAT'
-        name='sale-price-without-VAT'
-        value={value}
+        className="border border-2 rounded-md border-[#1D3557] px-2 py-1"
+        type="number"
+        id="sale-price-without-VAT"
+        name="sale-price-without-VAT"
+        value={state?.salePriceWithoutVat}
         onChange={handleChangeInput}
       />
     </div>
-  )
-}
+  );
+};
 
-export default SalePriceWithoutVATInput
+export default SalePriceWithoutVatInput;

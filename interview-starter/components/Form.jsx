@@ -1,76 +1,52 @@
-import React, { useState } from 'react'
-import Button from './Button'
-import SalePriceWithoutVATInput from './SalePriceWithoutVATInput'
-import SalePriceWithVATInput from './SalePriceWithVATInput'
-import VATRateSelect from './VATRateSelect'
+import React, { useState } from 'react';
+import Button from './Button';
+import SalePriceWithoutVatInput from './SalePriceWithoutVatInput';
+import SalePriceWithVatInput from './SalePriceWithVatInput';
+import VatRateSelect from './VatRateSelect';
 
 export const Form = () => {
-  const [salePriceWithoutVAT, setSalePriceWithoutVAT] = useState('')
-  const [VATRate, setVATRate] = useState('19')
-  const [salePriceWithVAT, setSalePriceWithVAT] = useState('')
-
-  const handleChangeSalePriceWithoutVAT = (event) => {
-    setSalePriceWithoutVAT(event.target.value)
-    setSalePriceWithVAT(
-      event.target.value ? (event.target.value * (1 + parseInt(VATRate) / 100)).toFixed(2) : ''
-    )
-  }
-
-  const handleChangeVATRate = (event) => {
-    setVATRate(event.target.value)
-    setSalePriceWithVAT(
-      salePriceWithoutVAT
-        ? (salePriceWithoutVAT * (1 + parseInt(event.target.value) / 100)).toFixed(2)
-        : ''
-    )
-  }
-
-  const handleChangeSalePriceWithVAT = (event) => {
-    setSalePriceWithVAT(event.target.value)
-    setSalePriceWithoutVAT(
-      (parseFloat(event.target.value) / (1 + parseInt(VATRate) / 100)).toFixed(2)
-    )
-  }
+  const [state, setState] = useState({
+    salePriceWithoutVat: '',
+    VatRate: 19,
+    salePriceWithVat: '',
+  });
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    const body = JSON.stringify({ salePriceWithoutVAT, VATRate, salePriceWithVAT })
-    if (salePriceWithoutVAT) {
+    event.preventDefault();
+    const body = JSON.stringify({
+      salePriceWithoutVat: state.salePriceWithoutVat,
+      VatRate: state.VatRate,
+      salePriceWithVat: state.salePriceWithVat,
+    });
+    if (state.salePriceWithoutVat) {
       await fetch('/endpoint', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body
-      })
-      alert(body)
+        body,
+      });
+      alert(body);
     }
-  }
+  };
 
   return (
-    <div className='flex align-items-center justify-content-center height-100vh'>
-      <div className='border border-radius-5px p-4 bc-main'>
-        <form onSubmit={handleSubmit} className='flex flex-direction-column row-gap-4'>
-          <SalePriceWithoutVATInput
-            label='Sale price without VAT'
-            value={salePriceWithoutVAT}
-            handleChange={handleChangeSalePriceWithoutVAT}
+    <div className="w-full h-full flex justify-center items-center">
+      <div className="bg-[#F1FAEE] opacity-80 grid gap-4 rounded-lg border-2 border-[#1D3557] p-4 w-1/2 shadow-xl">
+        <h2 className="text-xl text-center">Form</h2>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <SalePriceWithoutVatInput
+            label="Sale price without VAT"
+            state={state}
+            setState={setState}
           />
-          <VATRateSelect
-            label='VAT rate'
-            defaultValue={VATRate}
-            handleChange={handleChangeVATRate}
-          />
-          <SalePriceWithVATInput
-            label='Sale price with VAT'
-            value={salePriceWithVAT}
-            handleChange={handleChangeSalePriceWithVAT}
-          />
-          <Button label='Submit' />
+          <VatRateSelect label="VAT rate" state={state} setState={setState} />
+          <SalePriceWithVatInput label="Sale price with VAT" state={state} setState={setState} />
+          <Button label="Submit" />
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

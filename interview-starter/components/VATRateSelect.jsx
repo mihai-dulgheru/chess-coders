@@ -1,31 +1,26 @@
-import React, { useState } from 'react'
-
-const VATRateSelect = ({ label, defaultValue, handleChange }) => {
-  const [VATRate, setVATRate] = useState(defaultValue)
-
+const VatRateSelect = ({ label, state, setState }) => {
   const handleChangeSelect = (event) => {
-    setVATRate(event.target.value)
-    handleChange(event)
-  }
+    const VatRate = event.target.value;
+    const salePriceWithVat = (state.salePriceWithoutVat * (1 + VatRate / 100)).toFixed(2);
+    setState({ ...state, VatRate, salePriceWithVat });
+  };
 
   return (
-    <div className='flex justify-content-flex-start'>
-      <label className='w-50' htmlFor='VAT-rate'>
-        {label}
-      </label>
+    <div className="flex flex-col justify-start gap-1">
+      <label htmlFor="VAT-rate">{label}</label>
       <select
-        className='w-50 border-radius-5px border'
-        id='VAT-rate'
-        name='VAT-rate'
-        defaultValue={VATRate}
+        className="border border-2 rounded-md border-[#1D3557] px-2 py-1"
+        id="VAT-rate"
+        name="VAT-rate"
+        defaultValue={state.VatRate}
         onChange={handleChangeSelect}
       >
-        <option value='5'>5%</option>
-        <option value='9'>9%</option>
-        <option value='19'>19%</option>
+        <option value="5">5%</option>
+        <option value="9">9%</option>
+        <option value="19">19%</option>
       </select>
     </div>
-  )
-}
+  );
+};
 
-export default VATRateSelect
+export default VatRateSelect;

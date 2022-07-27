@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 const Button = ({ label }) => {
   return (
-    <div className='flex align-items-center justify-content-center'>
+    <div className="flex items-center justify-center">
       <button
-        className='border-none w-20 h-10 border-radius-5px p-2 text-align-center font-size-large bc-button color-white hover-button cursor-pointer'
-        type='submit'
+        className="w-32 h-10 border-none rounded-md p-2 flex justify-center items-center text-lg bg-[#E63946] text-white hover:opacity-80 cursor-pointer"
+        type="submit"
       >
         {label}
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

@@ -1,12 +1,12 @@
-import React from 'react'
-import { Form } from '../components/Form'
+import React from 'react';
+import { Form } from '../components/Form';
 
 const Page = () => {
   return (
-    <div>
+    <main className="h-screen font-sans bg-gradient-to-r from-[#F1FAEE] to-[#A8DADC]">
       <Form />
-    </div>
-  )
-}
+    </main>
+  );
+};
 
-export default Page
+export default Page;
