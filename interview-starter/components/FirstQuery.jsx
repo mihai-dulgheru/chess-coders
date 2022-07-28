@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const FirstQuery = () => {
   const [state, setState] = useState({
@@ -8,32 +8,37 @@ const FirstQuery = () => {
   });
 
   const fetchData = async () => {
-    const response = await axios.get(`https://dog.ceo/api/breeds/image/random`);
-    if (response.data.status === 'success') {
-      setState({ ...state, url: response.data.message });
+    const { data, status } = await axios.get(`https://dog.ceo/api/breeds/image/random`);
+    if (status === 200 && data.status === 'success') {
+      setState({ ...state, url: data.message });
     }
   };
 
-  useEffect(() => {
-    toast.promise(fetchData(), {
+  const effect = async () => {
+    await toast.promise(fetchData(), {
       loading: 'Fetching...',
       success: <b>Image fetched!</b>,
       error: <b>Could not fetch.</b>,
     });
-  }, []);
+  };
+
+  useEffect(effect, []);
 
   return (
-    <div>
-      <Toaster position="top-right" reverseOrder={false} />
-      <div className="flex justify-center pt-8">
-        {state.url && (
-          <img
-            src={state.url}
-            alt="Picture of a dog"
-            className="w-1/2 rounded-md border-solid border-2 border-sky-500 hover:border-dotted"
-          />
-        )}
-      </div>
+    <div className="flex flex-col justify-center items-center pt-8 gap-4">
+      {state.url && (
+        <img
+          src={state.url}
+          alt="Picture of a dog"
+          className="w-1/2 rounded-md border-solid border-2 border-sky-500 hover:border-dotted"
+        />
+      )}
+      <button
+        onClick={effect}
+        className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+      >
+        Get Image
+      </button>
     </div>
   );
 };
